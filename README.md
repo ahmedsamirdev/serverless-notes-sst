@@ -1,44 +1,80 @@
-# Getting Started with Serverless Stack (SST)
+# Serverless-stack Notes App
 
 This project was bootstrapped with [Create Serverless Stack](https://docs.serverless-stack.com/packages/create-serverless-stack).
+</br>
 
-Start by installing the dependencies.
+### Tech stack
 
-```bash
-$ npm install
+- React.js
+- AWS Lambda
+- API Gateway
+- DynamoDB
+- Cognito</br>
+
+### **Features**
+
+- Login with email address and receive confirmation number.
+
+- Upload files to your note.
+
+- Delete, list all your notes.
+
+- Buy more storage space for your notes by process credit card payments with Stripe.
+
+  
+
+### Usage
+
+Clone this repo.
+
+```
+git clone https://github.com/serverless-stack/demo-notes-app
 ```
 
-## Commands
+Install dependencies.
 
-### `npm run start`
+```
+npm install
+```
 
-Starts the local Lambda development environment.
+This project refers to a `.env.local` file with a secret that we are not checking in to the repo. Make sure to create one before deploying.
 
-### `npm run build`
+#### Developing Locally
 
-Build your app and synthesize your stacks.
+Start the [Live Lambda Dev Environment](https://docs.serverless-stack.com/live-lambda-development).
 
-Generates a `.build/` directory with the compiled files and a `.build/cdk.out/` directory with the synthesized CloudFormation stacks.
+``` 
+npx sst start
+```
 
-### `npm run deploy [stack]`
+Install dependencies for the frontend React app.
 
-Deploy all your stacks to AWS. Or optionally deploy, a specific stack.
+``` 
+cd frontend
+npm install
+```
 
-### `npm run remove [stack]`
+Start the React local dev environment from the `frontend/` dir.
 
-Remove all your stacks and all of their resources from AWS. Or optionally removes, a specific stack.
+``` 
+npm start
+```
 
-### `npm run test`
+#### Running Tests
 
-Runs your tests using Jest. Takes all the [Jest CLI options](https://jestjs.io/docs/en/cli).
+From the project root.
 
-## Documentation
+``` 
+npx sst test
+```
 
-Learn more about the Serverless Stack.
-- [Docs](https://docs.serverless-stack.com)
-- [@serverless-stack/cli](https://docs.serverless-stack.com/packages/cli)
-- [@serverless-stack/resources](https://docs.serverless-stack.com/packages/resources)
+#### Deploying to Prod
 
-## Community
+Run this in the project root to deploy it to prod.
 
-[Follow us on Twitter](https://twitter.com/ServerlessStack) or [post on our forums](https://discourse.serverless-stack.com).
+``` 
+npx sst deploy
+```
+
+
+[Live Preview](https://d3rxr44trvkza4.cloudfront.net/)
