@@ -9,7 +9,8 @@ This project was bootstrapped with [Create Serverless Stack](https://docs.server
 - AWS Lambda
 - API Gateway
 - DynamoDB
-- Cognito</br>
+- Cognito
+- React Bootstrap</br>
 
 ### **Features**
 
